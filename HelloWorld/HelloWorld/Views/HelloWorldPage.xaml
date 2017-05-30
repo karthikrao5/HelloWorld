@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.Views.HelloWorldPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                iOS="20, 40, 20, 20"
+                Android="20, 20, 20, 20"
+                WinPhone="20, 20, 20, 20" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand"
+                 Orientation="Vertical"
+                 Spacing="15">
+            <Label Text="Enter your name:" />
+
+            <!--<Entry x:Name="serverInput" Text="{Binding ServerName}"-->
+            <Entry x:Name="NameEntry" Text="Jane Doe" />
+            <Button x:Name="SayHelloButton" Text="Say Hello" Clicked="SayHelloButton_OnClicked" />
+            <Label x:Name="TestLabel" Text="Not Started"/> 
+            <Entry x:Name="Num1" Text="10" />
+            <Entry x:Name="Num2" Text="20" />
+            <Button x:Name="AddButton" Text="Add" Clicked="Add_OnClicked" />
+            <Button x:Name="SubtractButton" Text="Subtract" Clicked="Subtract_OnClicked" />
+            <Button x:Name="MultiplyButton" Text="Multiply" Clicked="Multiply_OnClicked" />
+            <Button x:Name="DivideButton" Text="Divide" Clicked="Divide_OnClicked" />
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
